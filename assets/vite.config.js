@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
     emptyOutDir: false,
     manifest: true,
     rollupOptions: {
-      input: "js/index.jsx",
+      input: "js/index.tsx",
     },
   },
   server: {
