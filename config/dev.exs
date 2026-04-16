@@ -25,7 +25,11 @@ config :planning_center_playground, PlanningCenterPlaygroundWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "S/bBdLfpwVCb4Vk8zOZw/pGg94rQHzwOKDdHVbRWrLpqVtNqF8owBiWirdqgqCfe",
   watchers: [
-    yarn: ["run", "dev", cd: Path.expand("../assets", __DIR__)]
+    bash: [
+      "-c",
+      "lsof -ti:5173 | xargs kill -9 2>/dev/null; exec yarn run dev",
+      cd: Path.expand("../assets", __DIR__)
+    ]
   ]
 
 # ## SSL Support

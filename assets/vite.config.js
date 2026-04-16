@@ -16,5 +16,8 @@ export default defineConfig(({ command }) => ({
     // In dev, Vite runs here and Phoenix proxies asset requests to it
     port: 5173,
     host: "localhost",
+    // Fail immediately if port is taken rather than silently shifting ports,
+    // which would break the hardcoded URLs in root.html.heex
+    strictPort: true,
   },
 }));
