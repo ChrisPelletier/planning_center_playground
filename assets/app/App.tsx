@@ -1,5 +1,7 @@
-import { AppShell, Burger, Stack, Text } from "@mantine/core";
+import Home from "./routes/Home";
+import { AppShell, Burger, NavLink, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { Routes, Route } from "react-router";
 
 export default function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -19,12 +21,16 @@ export default function App() {
 
         <div>Logo</div>
       </AppShell.Header>
-      <AppShell.Navbar>Navbar</AppShell.Navbar>
+      <AppShell.Navbar>
+        <NavLink href="/" label="Home" />
+        <NavLink href="/user-list" label="User List" />
+      </AppShell.Navbar>
 
       <AppShell.Main>
-        <Stack>
-          <Text color="dimmed">Planning Center Playground</Text>
-        </Stack>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user-list" element={<Text>User List</Text>} />
+        </Routes>
       </AppShell.Main>
     </AppShell>
   );

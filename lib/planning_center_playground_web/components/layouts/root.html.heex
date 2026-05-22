@@ -13,10 +13,13 @@
         window.$RefreshSig$ = () => (type) => type;
         window.__vite_plugin_react_preamble_installed__ = true;
       </script>
-      <script type="module" src="http://localhost:5173/@vite/client"></script>
-      <script type="module" src="http://localhost:5173/js/index.tsx"></script>
+      <script type="module" src="http://localhost:5173/@vite/client">
+      </script>
+      <script type="module" src="http://localhost:5173/app/index.tsx">
+      </script>
     <% else %>
-      <script type="module" src={~p"/assets/index.js"}></script>
+      <script type="module" src={~p"/assets/index.js"}>
+      </script>
     <% end %>
   </head>
   <body>

@@ -9,6 +9,7 @@
     /* Bundler mode — Vite handles actual transpilation, tsc is type-checking only */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "allowJs": true,
     "isolatedModules": true,
     "noEmit": true,
 
@@ -21,5 +22,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["js"]
+  "include": ["app", "js"]
 }

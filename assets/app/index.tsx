@@ -1,6 +1,7 @@
-import "../css/app.css";
+import "../assets/app.css";
 import "@mantine/core/styles.css";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router";
 import { MantineProvider } from "@mantine/core";
 import type { MantineThemeOverride } from "@mantine/core";
 import App from "./App";
@@ -44,7 +45,9 @@ const theme: MantineThemeOverride = {
 
 const container = document.getElementById("app") as HTMLElement;
 createRoot(container).render(
-  <MantineProvider defaultColorScheme="light" theme={theme}>
-    <App />
-  </MantineProvider>,
+  <BrowserRouter>
+    <MantineProvider defaultColorScheme="light" theme={theme}>
+      <App />
+    </MantineProvider>
+  </BrowserRouter>,
 );
