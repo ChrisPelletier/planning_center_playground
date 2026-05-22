@@ -12,10 +12,15 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.8"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@mantine/core": "^9.2.1",
+    "@mantine/hooks": "^9.2.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   }
