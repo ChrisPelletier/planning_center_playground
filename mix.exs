@@ -59,7 +59,8 @@ defmodule PlanningCenterPlayground.MixProject do
       {:absinthe_plug, "~> 1.5"},
       {:absinthe_phoenix, "~> 2.0"},
       {:guardian, "~> 2.3"},
-      {:bcrypt_elixir, "~> 3.0"}
+      {:bcrypt_elixir, "~> 3.0"},
+      {:dotenvy, "~> 0.8", only: [:dev, :test]}
     ]
   end
 
